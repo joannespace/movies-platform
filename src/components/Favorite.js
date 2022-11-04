@@ -1,6 +1,5 @@
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
-import { Outlet } from "react-router-dom";
 import useInitialize from "../hooks/useInitialize";
 import MovieCard from "./MovieCard";
 

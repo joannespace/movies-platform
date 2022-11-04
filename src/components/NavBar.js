@@ -17,15 +17,10 @@ export default function NavBar() {
   const { isLoggedIn, logout, username, open, setOpen } = useInitialize();
   const navigate = useNavigate();
 
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
   };
 
   const handleCloseUserMenu = () => {
@@ -91,7 +86,7 @@ export default function NavBar() {
                   onClose={handleCloseUserMenu}
                 >
                   {settings.map((setting) => (
-                    <MenuItem key={setting} onClick={handleCloseNavMenu}>
+                    <MenuItem key={setting} onClick={handleCloseUserMenu}>
                       {setting === "Logout" ? (
                         <Button onClick={handleLogOutBtn}>{setting}</Button>
                       ) : (
