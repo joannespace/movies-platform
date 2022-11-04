@@ -38,7 +38,9 @@ function MovieDetails() {
         </div>
 
         {allMovies
-          .filter((movie) => movie.id == movieId)
+          .filter((movie) => {
+            return movie.id === Number(movieId);
+          })
           .map((movie) => {
             return (
               <Stack
